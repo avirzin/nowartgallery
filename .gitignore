@@ -1,48 +1,84 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
-
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
+# WordPress Core
+# WordPress core files should not be in this repository
+# They are installed in Docker containers or on the server
 /wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
 /wp-includes/
-/index.php
-/license.txt
-/readme.html
 /wp-*.php
 /xmlrpc.php
+/license.txt
+/readme.html
+/index.php
 
-# Configuration
+# WordPress Configuration
 wp-config.php
+.htaccess
 
-# Example themes
+# Kiosko Parent Theme
+# The Kiosko parent theme is installed via WordPress admin, not version controlled
+/wp-content/themes/kiosko/
+wp-content/themes/kiosko/
+
+# All other parent themes (if any are downloaded locally)
 /wp-content/themes/twenty*/
 
-# Example plugin
-/wp-content/plugins/hello.php
+# Plugins (except our custom payment plugin which is in a separate repo)
+# Note: If you need to whitelist a specific plugin, uncomment and modify:
+# !/wp-content/plugins/your-plugin-name/
+/wp-content/plugins/
 
-# Uploads
+# Uploads and Media
 /wp-content/uploads/
+/wp-content/upgrade/
 
-# Log files
+# WordPress Languages
+/wp-content/languages/
+
+# Logs
 *.log
+*.log.*
 
-# htaccess
-/.htaccess
+# Environment Variables
+.env
+.env.local
+.env.*.local
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
+# Docker
+docker-compose.override.yml
 
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (if any build tools are added later)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Backup files
+*.bak
+*.backup
+*.sql
+*.tar
+*.tar.gz
+*.zip
+
+# Temporary files
+*.tmp
+*.temp
+
+# IMPORTANT: DO NOT IGNORE THE CHILD THEME
+# The child theme (theme/nowartgallery-child/) should be version controlled
+# !/wp-content/themes/nowartgallery-child/
+# !theme/nowartgallery-child/

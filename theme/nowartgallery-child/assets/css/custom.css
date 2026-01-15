@@ -1,0 +1,87 @@
+/**
+ * Now Art Gallery Child - Custom Styles
+ *
+ * Custom CSS for art gallery specific styling
+ */
+
+/* Limited Edition Badge */
+.limited-edition-badge {
+	display: inline-block;
+	padding: 4px 12px;
+	background-color: #000;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 10;
+}
+
+/* Artwork Details */
+.artwork-details {
+	margin: 20px 0;
+	padding: 20px 0;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.artwork-details p {
+	margin: 10px 0;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+.artwork-details strong {
+	font-weight: 600;
+	margin-right: 8px;
+}
+
+.artist-name,
+.artwork-dimensions,
+.limited-edition {
+	color: #333;
+}
+
+/* Product Gallery Enhancements */
+.woocommerce-product-gallery__image img {
+	transition: transform 0.3s ease;
+}
+
+.woocommerce-product-gallery__image:hover img {
+	transform: scale(1.02);
+}
+
+/* Archive/Gallery View Enhancements */
+.woocommerce ul.products li.product {
+	position: relative;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+	margin-top: 15px;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+/* Cart and Checkout Styling */
+.woocommerce-cart .cart_item,
+.woocommerce-checkout .shop_table {
+	border-color: #e0e0e0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+	.limited-edition-badge {
+		font-size: 10px;
+		padding: 3px 8px;
+		top: 5px;
+		right: 5px;
+	}
+	
+	.artwork-details {
+		margin: 15px 0;
+		padding: 15px 0;
+	}
+}

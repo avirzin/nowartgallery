@@ -1,4 +1,4 @@
-# Now Art Gallery - E-commerce Platform
+# Now Art Gallery - Art E-commerce Platform
 
 WordPress + WooCommerce e-commerce platform for Now Art Gallery (nowartgallery.art.br), featuring a custom Kiosko child theme and AWS Lightsail infrastructure.
 
